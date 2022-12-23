@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="../static/css/index.css">
+{% endblock %}
+{% block content %}
+    <form action="/computation" method="POST">
+        <label for="message">Enter message: </label><br>
+        <input type="text" name="message">
+        <input type="submit" value="submit">
+    </form>
+{% endblock %}

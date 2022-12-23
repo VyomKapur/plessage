@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+
+{% block title %}Result{% endblock %}
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="../static/css/result.css">
+{% endblock %}
+{% block content %}
+    <h1>Your Spotify Playlist</h1>
+    <div class="playlist-showcase">
+    {% for track in track_id %}
+    <div>
+        <iframe class="iframe-track" allowtransparency="true"
+        src="https://open.spotify.com/embed/track/{{ track }}"
+        allow="encrypted-media" frameborder="0"></iframe>
+    </div>
+    {% endfor %}
+    </div>
+{% endblock %}
