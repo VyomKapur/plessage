@@ -9,8 +9,8 @@ class SpotifyAPI(object):
     access_token = None
     access_token_expires = datetime.datetime.now()
     access_token_did_expires = True
-    client_id = 'b158470a47764f1aa01d8f9c6b4d19ec'
-    client_secret = '3479597123804999a7af289ba335e6b9'
+    client_id = "YOUR CLIENT ID"
+    client_secret = "YOUR CLIENT SECRET"
     token_url = "https://accounts.spotify.com/api/token"
     method = "POST"
     
@@ -39,7 +39,7 @@ class SpotifyAPI(object):
 
     def perform_auth(self):
         query_params = {
-            'client_id': 'b158470a47764f1aa01d8f9c6b4d19ec',
+            'client_id': "CLIENT ID",
             'response_type': 'code',
             'redirect_uri': 'http://127.0.0.1:5000/callback',
             'scope': "user-library-read playlist-modify-public",
